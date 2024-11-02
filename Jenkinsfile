@@ -13,6 +13,12 @@ pipeline {
                 sh './mvnw clean test'  // Run your tests
             }
         }
+        stage('Build') { 
+            steps {
+                sh 'mvn -B -DskipTests clean package' 
+            }
+        }
+    }
     }
 
     post {
