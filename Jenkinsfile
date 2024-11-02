@@ -1,22 +1,15 @@
 pipeline {
-    agent { label 'linux' }  // Specify the agent label
-
-    stages {
-        stage('Run the Tests') {
-            steps {
-                sh './mvnw clean test'  // Run your tests
-            }
-        }
-        stage('Build') { 
-            steps {
-                sh 'mvn -B -DskipTests clean package' 
-            }
-        }
+  agent { label 'linux' }
+  stages {
+    stage('Run the tests') {
+      steps {
+        sh './mvnw clean test'
+      }
     }
-
-    post {
-        always {
-            junit 'target/surefire-reports/*.xml'  // Path to your JUnit reports
-        }
+  }
+  post {
+    always {
+      junit 'target/surefire-reports/*.xml'
     }
+  }
 }
