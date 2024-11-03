@@ -13,7 +13,7 @@ pipeline {
         always {
             script {
                 // List the contents of the workspace for debugging
-                sh 'ls -R'  // Show all files and directories
+                bat 'dir' // Show all files and directories
             }
             junit 'target/surefire-reports/*.xml'  // Publish JUnit test results
         }
