@@ -2,7 +2,7 @@
 <suite name="SuiteName">
     <test name="TestName">
         <classes>
-            <class name="your.package.TestClassName" />
+            <class name="com.planetpope.testng.BasicTestCase" />
             <!-- Add more test classes as needed -->
         </classes>
     </test>
