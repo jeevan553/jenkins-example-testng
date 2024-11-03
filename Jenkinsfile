@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Run the tests') {
             steps {
-                sh './mvnw clean test -X'  // Run tests with debug output
+                bat './mvnw clean test -X'  // Run tests with debug output
             }
         }
     }
