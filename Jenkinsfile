@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Run the tests') {
             steps {
-                bat './mvnw clean test -DsuiteXmlFile=testng.xml -X'  // Run tests with TestNG
+                bat './mvnw clean test -X'  // Run tests with TestNG
             }
         }
     }
